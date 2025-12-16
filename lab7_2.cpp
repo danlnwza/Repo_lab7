@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <stdexcept>
 
 using namespace std;
 
@@ -18,13 +17,7 @@ int main() {
     cin >> student_id;
 
     string id_prefix_str = student_id.substr(0, 2);
-    
-    try {
-        id_prefix_int = stoi(id_prefix_str);
-    } catch (const std::exception& e) {
-        id_prefix_int = 12; 
-    }
-    
+    id_prefix_int = stoi(id_prefix_str);
     gear = id_prefix_int - 12;
 
     cout << "Fahsai: I think you may be GEAR " << gear << ". I have a free movie ticket for you." << endl;
@@ -42,7 +35,7 @@ int main() {
     cout << name << ": ";
     getline(cin, final_message);
 
-    cout << "Fahsai: 555+ see you " << day << ". Bye Bye " << "\\(^ ^)/" << endl;
+    cout << "Fahsai: 555+ see you " << day << ". Bye Bye \\(^ ^)/" << endl;
 
     return 0;
 }
